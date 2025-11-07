@@ -1,5 +1,5 @@
-
-character_list = [['Raul', (5,15)], ['Maria', (15,5)], ['Carlos', (10,10)]]
+character_list = []
+num_characters = 3
 
 def get_nome(character):
     return character[0]
@@ -30,23 +30,22 @@ def get_max_defesa():
             max_char = get_nome(character)
     return max_char, max_defesa
 
-def show_characters_desc():
-    for character in character_list:
-        print(get_nome(character))
-        print(get_ataque(character))
-        print(get_defesa(character))
-
 def show_character_list():
     print(character_list)
 
 def show_record_characters():
-    nome, valor = get_max_ataque()
-    print("Ataque", nome, valor)
-    nome, valor = get_max_defesa()
-    print("Defesa", nome, valor)
+    print("Ataque", *get_max_ataque())
+    print("Defesa", *get_max_defesa())
+    
 
+def input_characters(num):
+    for i in range(num):
+        nome = input()
+        ataque = int(input())
+        defesa = int(input())
+        character_list.append([nome, (ataque, defesa)])
 
-show_characters_desc() 
+input_characters(num_characters)
 show_character_list()
 show_record_characters()
 
