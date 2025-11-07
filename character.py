@@ -1,26 +1,3 @@
-#test
-# #leia o nome (string) e os vaores de ataque e defesa (interiros) de 3 personagens
-"""
-Guarde os dados num array bidimensional, onde cada linha contenha um nome e um tuplo
-(ataque, defesa)
-
-Mostre a estrutura final e indique o valor mais elevado de ataque e defesa, com o respectivo NotImplemented
-
-Raul
-5
-15
-Maria
-15
-5
-Carlos
-10
-10
-
-
-Ataque Maria 15
-Defesa Raul 15
-
-"""
 
 character_list = [['Raul', (5,15)], ['Maria', (15,5)], ['Carlos', (10,10)]]
 
